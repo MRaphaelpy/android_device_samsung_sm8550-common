@@ -79,6 +79,12 @@ TARGET_KERNEL_SOURCE := kernel/samsung/sm8550
 # Kernel modules
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8550-modules
 
+# Include kernel build config
+include vendor/infinity/config/BoardConfigKernel.mk
+
+# Include Soong config (must be after kernel config to export variables)
+include vendor/infinity/config/BoardConfigSoong.mk
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
